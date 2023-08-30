@@ -138,6 +138,7 @@ const StyledImgContainer = styled.a`
   &:hover,
   &:focus {
     background: transparent;
+    z-index:100;
     &:before,
     ${StyledFeaturedImg} {
       background: transparent;

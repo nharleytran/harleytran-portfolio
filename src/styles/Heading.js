@@ -10,7 +10,7 @@ const Heading = styled.h3`
   margin: 10px 0 40px;
   width: 100%;
   white-space: nowrap;
-  font-size: ${fontSizes.h3};
+  font-size: ${fontSizes.h4};
   ${media.tablet`font-size: 24px;`};
 
   &:before {

@@ -2,7 +2,7 @@ import { hex2rgba } from '@utils';
 
 const ACCENT = '#64ffda';
 const DARK_BG = '#020c1b';
-const BG = '#0a192f';
+const BG = '#1F2833';
 
 const theme = {
   colors: {
@@ -26,14 +26,15 @@ const theme = {
   },
 
   fontSizes: {
-    xs: '12px',
-    smish: '13px',
-    sm: '14px',
-    md: '16px',
-    lg: '18px',
-    xl: '20px',
-    xxl: '22px',
-    h3: '32px',
+    xs: '16px',
+    smish: '15px',
+    sm: '17px',
+    md: '20px',
+    lg: '22px',
+    xl: '24px',
+    xxl: '26px',
+    h3: '36px',
+    h4: '40px',
   },
 
   easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)',

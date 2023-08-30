@@ -4,7 +4,27 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { email } from '@config';
 import styled from 'styled-components';
 import { theme, mixins, media, Section } from '@styles';
+import myImage from '../../images/anime.png';
 const { colors, fontSizes, fonts, navDelay, loaderDelay } = theme;
+
+const StyledLayout = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  gap: 100px; /* Gap between columns */
+  align-items: center; /* Align content vertically */
+  ${media.tablet`grid-template-columns: 0fr 1fr;`};
+
+`;
+
+const StyledImage = styled.img`
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height:80%;
+  transition: transform 1s ease;
+  &:hover{
+    transform: perspective(300px) scale(0.9); /* Apply a 3D rotation */
+  }
+`;
+
 
 const StyledContainer = styled(Section)`
   ${mixins.flexCenter};
@@ -15,6 +35,7 @@ const StyledContainer = styled(Section)`
   div {
     width: 100%;
   }
+
 `;
 const StyledOverline = styled.h1`
   color: ${colors.green};
@@ -26,25 +47,31 @@ const StyledOverline = styled.h1`
   ${media.tablet`font-size: ${fontSizes.smish};`};
 `;
 const StyledTitle = styled.h2`
-  font-size: 80px;
+  font-size: 120px;
   line-height: 1.1;
   margin: 0;
-  ${media.desktop`font-size: 70px;`};
-  ${media.tablet`font-size: 60px;`};
+  text-shadow: 0px 3px 0px rgba(199, 195, 201, 0.785); /* Add a shadow for depth */
+  transition: transform 1s ease;
+  &:hover{
+    transform: perspective(300px) scale(0.9); /* Apply a 3D rotation */
+  }
+  ${media.desktop`font-size: 150px;`};
+  ${media.tablet`font-size: 80px;`};
   ${media.phablet`font-size: 50px;`};
   ${media.phone`font-size: 40px;`};
 `;
 const StyledSubtitle = styled.h3`
-  font-size: 80px;
+  font-size: 50px;
   line-height: 1.1;
   color: ${colors.slate};
-  ${media.desktop`font-size: 70px;`};
-  ${media.tablet`font-size: 60px;`};
-  ${media.phablet`font-size: 50px;`};
-  ${media.phone`font-size: 40px;`};
+  ${media.desktop`font-size: 50px;`};
+  ${media.tablet`font-size: 40px;`};
+  ${media.phablet`font-size: 30px;`};
+  ${media.phone`font-size: 20px;`};
 `;
 const StyledDescription = styled.div`
-  margin-top: 25px;
+  margin-top: 0px;
+  font-size: 1.5rem;
   width: 50%;
   max-width: 500px;
   a {
@@ -53,7 +80,7 @@ const StyledDescription = styled.div`
 `;
 const StyledEmailLink = styled.a`
   ${mixins.bigButton};
-  margin-top: 50px;
+  margin-top: 25px;
 `;
 
 const Hero = ({ data }) => {
@@ -89,7 +116,10 @@ const Hero = ({ data }) => {
 
   const items = [one, two, three, four, five];
 
+  
   return (
+    <StyledLayout>
+    <StyledImage src={myImage} alt="Product Image"  />
     <StyledContainer>
       <TransitionGroup component={null}>
         {isMounted &&
@@ -100,6 +130,7 @@ const Hero = ({ data }) => {
           ))}
       </TransitionGroup>
     </StyledContainer>
+    </StyledLayout>
   );
 };
 

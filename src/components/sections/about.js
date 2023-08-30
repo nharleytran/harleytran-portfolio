@@ -10,6 +10,8 @@ const { colors, fontSizes, fonts } = theme;
 const StyledContainer = styled(Section)`
   position: relative;
 `;
+
+
 const StyledFlexContainer = styled.div`
   ${mixins.flexBetween};
   align-items: flex-start;
@@ -17,7 +19,8 @@ const StyledFlexContainer = styled.div`
 `;
 const StyledContent = styled.div`
   width: 60%;
-  max-width: 480px;
+  max-width: 600px;
+  font-size: 1.25rem;
   ${media.tablet`width: 100%;`};
   a {
     ${mixins.inlineLink};
@@ -39,7 +42,7 @@ const Skill = styled.li`
   font-size: ${fontSizes.smish};
   color: ${colors.green};
   &:before {
-    content: '▹';
+    content: '.';
     position: absolute;
     left: 0;
     color: ${colors.green};
@@ -120,7 +123,7 @@ const About = ({ data }) => {
 
   return (
     <StyledContainer id="about" ref={revealContainer}>
-      <Heading>{title}</Heading>
+      <Heading >{title}</Heading>
       <StyledFlexContainer>
         <StyledContent>
           <div dangerouslySetInnerHTML={{ __html: html }} />
