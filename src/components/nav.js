@@ -173,18 +173,22 @@ class Nav extends Component {
     setTimeout(
       () =>
         this.setState({ isMounted: true }, () => {
+          if (typeof window !== 'undefined') {
           window.addEventListener('scroll', () => throttle(this.handleScroll()));
           window.addEventListener('resize', () => throttle(this.handleResize()));
           window.addEventListener('keydown', e => this.handleKeydown(e));
+          }
         }),
       100,
     );
   }
 
   componentWillUnmount() {
+    if (typeof window !== 'undefined') {
     window.removeEventListener('scroll', () => this.handleScroll());
     window.removeEventListener('resize', () => this.handleResize());
     window.removeEventListener('keydown', e => this.handleKeydown(e));
+    }
   }
 
   toggleMenu = () => this.setState({ menuOpen: !this.state.menuOpen });
