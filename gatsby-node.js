@@ -7,6 +7,8 @@
 const path = require('path');
 const _ = require('lodash');
 
+
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
   const postTemplate = path.resolve(`src/templates/post.js`);
@@ -68,7 +70,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 // https://www.gatsbyjs.org/docs/node-apis/#onCreateWebpackConfig
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  // https://www.gatsbyjs.org/docs/debugging-html-builds/#fixing-third-party-modules
+  https://www.gatsbyjs.org/docs/debugging-html-builds/#fixing-third-party-modules
   if (stage === 'build-html') {
     actions.setWebpackConfig({
       module: {
@@ -79,6 +81,14 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
           },
           {
             test: /animejs/,
+            use: loaders.null(),
+          },
+          {
+            test: /smooth-scroll/,
+            use: loaders.null(),
+          },
+          {
+            test: /particles-bg/,
             use: loaders.null(),
           },
         ],
@@ -100,18 +110,3 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
     },
   });
 };
-
-exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
-  if (stage === "build-html") {
-    actions.setWebpackConfig({
-      module: {
-        rules: [
-          {
-            test: /bad-module/,
-            use: loaders.null(),
-          },
-        ],
-      },
-    })
-  }
-}
