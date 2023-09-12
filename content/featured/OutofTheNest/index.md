@@ -3,7 +3,7 @@ date: '2'
 title: 'Out of the Nest - Web Forum'
 cover: 'outofthenest.png'
 github: 'https://github.com/nharleytran/out-of-the-nest'
-external: 'https://twitter.com/girlscript_bot'
+external: 'https://www.canva.com/design/DAFhNi5ilRo/0g9FdiMxtbXiNBxfIiQH4Q/edit?utm_content=DAFhNi5ilRo&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
 tech:
   - MongoDB
   - Express
