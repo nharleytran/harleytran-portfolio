@@ -1,9 +1,7 @@
 const config = require('./src/config');
 
 module.exports = {
-  flags: {
-    DEV_SSR: true
-  },
+
   siteMetadata: {
     title: config.siteTitle,
     siteUrl: config.siteUrl,

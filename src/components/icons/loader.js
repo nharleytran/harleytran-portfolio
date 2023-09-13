@@ -6,7 +6,7 @@ const IconLoader = () => (
     <g>
       <g id="B" transform="translate(11.000000, 5.000000)"></g>
       <path
-        stroke="#ffffff"
+        stroke="#fd4e4e"
         strokeWidth="5"
         strokeLinecap="round"
         strokeLinejoin="round"

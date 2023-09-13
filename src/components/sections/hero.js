@@ -63,7 +63,7 @@ const StyledTitle = styled.h2`
 const StyledSubtitle = styled.h3`
   font-size: 50px;
   line-height: 1.1;
-  color: ${colors.slate};
+  color: ${colors.green};
   ${media.desktop`font-size: 50px;`};
   ${media.tablet`font-size: 40px;`};
   ${media.phablet`font-size: 30px;`};

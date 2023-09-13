@@ -12,7 +12,7 @@ const StyledMainContainer = styled(Main)`
 
 const IndexPage = ({ location, data }) => (
   <Layout location={location}>
-    {/* <ParticlesBg type="cobweb" bg={true} color="#ffffff" /> */}
+    <ParticlesBg type="cobweb" bg={true} color="#541616" />
     <StyledMainContainer className="fillHeight">
       <Hero data={data.hero.edges} />
       <About data={data.about.edges} />
