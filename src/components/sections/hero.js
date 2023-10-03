@@ -118,8 +118,6 @@ const Hero = ({ data }) => {
 
   
   return (
-    <StyledLayout>
-    <StyledImage src={myImage} alt="Product Image"  />
     <StyledContainer>
       <TransitionGroup component={null}>
         {isMounted &&
@@ -130,7 +128,6 @@ const Hero = ({ data }) => {
           ))}
       </TransitionGroup>
     </StyledContainer>
-    </StyledLayout>
   );
 };
 
