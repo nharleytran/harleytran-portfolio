@@ -47,7 +47,7 @@ const StyledOverline = styled.h1`
   ${media.tablet`font-size: ${fontSizes.smish};`};
 `;
 const StyledTitle = styled.h2`
-  font-size: 120px;
+  font-size: 130px;
   line-height: 1.1;
   margin: 0;
   text-shadow: 0px 3px 0px rgba(199, 195, 201, 0.785); /* Add a shadow for depth */

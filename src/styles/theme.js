@@ -2,12 +2,12 @@ import { hex2rgba } from '@utils';
 
 const ACCENT = '#fd4e4e';
 const DARK_BG = '#541616';
-const BG = '#fce5e5';
+const BG = '#faf5f5';
 
 const theme = {
   colors: {
     darkNavy: DARK_BG,
-    navy: BG,
+    navy:BG,
     lightNavy: '#f9d9d9',
     lightestNavy: '#c6a6a600',
     slate: '#541616',
@@ -27,11 +27,11 @@ const theme = {
 
   fontSizes: {
     xs: '16px',
-    smish: '15px',
+    smish: '20px',
     sm: '17px',
     md: '20px',
     lg: '22px',
-    xl: '24px',
+    xl: '30px',
     xxl: '26px',
     h3: '36px',
     h4: '40px',
