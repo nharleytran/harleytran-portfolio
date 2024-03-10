@@ -49,7 +49,7 @@ const StyledContent = styled.div`
 
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/';
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(isHome);
 
   useEffect(() => {
     if (isLoading) {
