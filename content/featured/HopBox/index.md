@@ -3,7 +3,7 @@ date: '3'
 title: 'HopBox - Storage Marketplace'
 cover: 'demo.png'
 github: 'https://github.com/hopbox-jhu/hopbox'
-external: 'https://readymag.website/u1382179296/4638606'
+external: 'https://readymag.website/u1382179296/4638606/'
 tech:
   - MongoDB
   - Express
